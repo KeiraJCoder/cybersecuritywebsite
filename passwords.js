@@ -1,0 +1,19 @@
+const passwords = [
+    "123456",
+    "password",
+    "12345678",
+    "12345",
+    "qwerty",
+    "abc123",
+    "111111",
+    "admin",
+    "letmein",
+    "welcome",
+    "sunshine",
+    "football",
+    "password1",
+    "123123",
+    "1234",
+    "superman",
+    "iloveyou"
+];

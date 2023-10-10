@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Escape Room - Challenge 2</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add CSS styles for the phishing email here */
+        .phishing-email {
+            width: 80%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f7f7f7;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer; /* Make the entire email clickable */
+        }
+
+        .red-flag-placeholder {
+            /* cursor: pointer;  Commenting this out to prevent cursor change on hover */
+            background-color: transparent;  /* No background color */
+            display: inline;  /* Displayed inline with the text */
+            color: inherit;   /* Inherits the color of the surrounding text */
+            text-decoration: none;  /* No underline or other text decoration */
+        }
+
+        .red-flag-identified {
+            background-color: rgb(255, 0, 0); /* Or any other color you'd like to use to indicate a correct identification */
+        }
+    
+    </style>
+</head>
+<body>
+<header>
+    <h1>Cybersecurity Escape Room</h1>
+    <p>Challenge 2</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="challenges.html">Challenges</a></li>
+    </ul>
+</nav>
+
+<main>
+    <section>
+        <h2>Challenge 2: Phishing Email Detection</h2>
+        <div class="phishing-email" id="phishingEmail">
+            <p>From: <span class="red-flag-placeholder" data-redflag="Unknown Sender">Brenda J. Gonzalez (LTC) &lt;ltcol.brenda@usasoc.mil&gt;</span></p>
+            <p>Sent: Monday, February 8, 2021 2:53 PM</p>
+            <p>Subject: URGENT !!</p>
+            <br>
+            <p><span class="red-flag-placeholder" data-redflag="Unusual Greeting">Assalamu'alaikum!</span></p>
+            <br>
+            <p>This is Brenda J. Gonzalez (LTC) of the U.S Army Special Operations Command (USASOC), 7th Special Forces Group (Airborne), Air Force Base – Afghanistan</p>
+            <br>
+            <p>Please I need your <span class="red-flag-placeholder" data-redflag="Urgent Request">urgent assistance</span> in securing a consignment (two trunk boxes) containing <span class="red-flag-placeholder" data-redflag="Large Sum of Money">($20,000,000)</span>, the funds are surpluses of several contracts executed by my department during a supply of MH (Military Hardware).</p>
+            <br>
+            <p>The consignment is presently in Amsterdam Schiphol Airport in the Netherlands, via a U.S Military Air & Surface Transportation Company (ADM Europa LLC). My desire and purpose is to have the (ADM Europa LLC) to deliver the funds to you for safe-keeping until I return back to the U.S mid-next year after my deployment.</p>
+            <br>
+            <p>If you receive this message please e-mail me immediately with a delivery address and your full contact information; the deal is 60/40 split (60% for me and 40% for you); I am not a greedy woman and I hope you will not double cross a <span class="red-flag-placeholder" data-redflag="Emotional Manipulation">struggling uniform single mother with 3 teenage children?</span></p>
+            <br>
+            <p>Once you receive the consignment ($20,000,000) take out your 40% ($8,000,000) and save my 60% ($12,000,000) for me until I return back to the U.S mid-next year after my deployment.</p>
+            <br>
+            <p> <span class="red-flag-placeholder" data-redflag="Religious Appeal">May God bless you as you extend your helping hand to the needy!</span></p>
+            <br>
+            <p>Please <span class="red-flag-placeholder" data-redflag="Insistence on Immediate Response">REPLY!</span></p>
+            <br>
+            <p>Respectfully,</p>
+            <p>Lt. Col. Brenda J. Gonzalez (Mrs.)</p>
+            <p>U.S. Army 7th Special Forces Group (Airborne)</p>
+            <p>Air Force Base – Afghanistan</p>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2023 CodeNation Cybersecurity Escape Room</p>
+</footer>
+
+<script src="phishing-email.js" defer></script>
+</body>
+</html>
