@@ -9,7 +9,7 @@
         #passwordFeedback, #simulationFeedback {
             font-weight: bold;
         }
-        
+
         .valid {
             color: green;
         }
@@ -18,28 +18,15 @@
             color: red;
         }
 
-        #passwordPolicy {
-            border: 1px solid #ccc;
-            padding: 15px;
-            margin: 20px 0;
-            background-color: #f9f9f9;
-        }
-
-        #timer {
-            color: red;
-            font-weight: bold;
-        }
-
-        #hint {
-            cursor: pointer;
-            text-decoration: underline;
+        #randomEvent {
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Cybersecurity Escape Room</h1>
-        <p>Challenge 5: Protect the Company's Virtual System!</p>
+        <p>Challenge 5</p>
     </header>
 
     <nav>
@@ -51,37 +38,38 @@
 
     <main>
         <section>
-            <h2>Welcome, Recruit!</h2>
-            <p>You're the new cybersecurity specialist at our firm. We've been notified of a potential cyberattack. Secure our system before it's too late!</p>
-            <div id="timer">Time Remaining: 15:00</div>
-
-            <!-- Password Strength Checker -->
+            <h2>Challenge 5: Cybersecurity Simulation</h2>
+            <p>You are the chief security officer for a secret agency. An imminent cyberattack is expected, and it's your job to ensure the servers are secure!</p>
+<p id="passwordFeedback">For steps to combat vulnerabilities visit out <a href="policies.html" target="_blank">Policies and Procedures</a>.</p>
+            <!-- Pop-up Modal -->
+        <div id="securityAlertModal" style="display: none; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 10;">
+            <div style="background-color: white; width: 60%; margin: 50px auto; padding: 20px; border-radius: 10px;">
+                <h2>Security Alert!</h2>
+                <p id="securityAlertMessage"></p>
+                <button onclick="closeModal()">Acknowledge</button>
+            </div>
+        </div>
+            
             <h3>Password Strength</h3>
             <input type="password" id="passwordInput" placeholder="Enter a strong password" oninput="checkPasswordStrength(this.value)">
-            <p id="passwordFeedback">For password requirements, see our <a href="policies.html">Password Policy</a>.</p>
-
-            <!-- Two-Factor Authentication (2FA) Setup -->
+            
+            
             <h3>Two-Factor Authentication (2FA)</h3>
             <button onclick="toggle2FA()">Enable 2FA</button>
 
-            <!-- Check for Software Updates -->
             <h3>Software Updates</h3>
             <button onclick="updateSoftware()">Check for Updates</button>
 
-            <!-- Firewall Activation -->
             <h3>Firewall</h3>
             <button onclick="toggleFirewall()">Activate Firewall</button>
 
-            <!-- VPN Activation -->
             <h3>VPN</h3>
             <button onclick="toggleVPN()">Activate VPN</button>
-
-            <h3>Need a hint?</h3>
-            <p id="hint">Click here to get a hint... but it comes at a cost!</p>
-
-            <br><br>
-            <button id="simulateAttack">Simulate Attack</button>
+<br><br>
+            <button id="simulateAttack">Test Security Against Cyberattack</button>
             <p id="simulationFeedback"></p>
+            
+            <div id="randomEvent" style="color: blue;"></div>
         </section>
     </main>
 
