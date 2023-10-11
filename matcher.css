@@ -1,0 +1,25 @@
+.game-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 400px;
+    margin: 50px auto;
+}
+
+.card {
+    width: 190px;
+    height: 70px;
+    text-align: center;
+    font-size: 80%;
+    display: flex;
+    justify-content: center;   /* Horizontally center */
+    align-items: center;       /* Vertically center */
+    background-color: #eee;
+    cursor: pointer;
+    border-radius: 5px;
+    user-select: none;
+}
+
+.card.selected {
+    background-color: #ddd;
+}
