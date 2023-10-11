@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Escape Room - Challenge 4</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .url-item.selected {
+            background-color: #ff0000; /* Indicate a selected URL */
+            text-decoration: underline;
+            
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Cybersecurity Escape Room</h1>
+        <p>Challenge 3</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="challenges.html">Challenges</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section>
+            <h2>Challenge 4: URL Analysis</h2>
+            <p>URLs can sometimes be deceiving. Your challenge is to analyze each URL and identify if it's secure or a potential threat.</p><br><p> Select the URLs you think are unsafe.</p>
+            <br><br>
+            <div class="url-list">
+                <!-- Safe URLs -->
+                <div class="url-item" data-url-type="safe" onclick="selectUrl(this)">https://secure-banking.com</div>
+                <div class="url-item" data-url-type="safe" onclick="selectUrl(this)">https://reliable-news-source.com</div>
+                <div class="url-item" data-url-type="safe" onclick="selectUrl(this)">https://officialtechstore.com</div>
+                <div class="url-item" data-url-type="safe" onclick="selectUrl(this)">https://trusted-health-info.org</div>
+                <div class="url-item" data-url-type="safe" onclick="selectUrl(this)">https://popular-music-stream.com</div>
+                <div class="url-item" data-url-type="safe" onclick="selectUrl(this)">https://university-official.edu</div>
+                <div class="url-item" data-url-type="safe" onclick="selectUrl(this)">https://world-sports-central.com</div>
+                <div class="url-item" data-url-type="safe" onclick="selectUrl(this)">https://certified-charity.org</div>
+                <div class="url-item" data-url-type="safe" onclick="selectUrl(this)">https://officialmoviedatabase.com</div>
+                <div class="url-item" data-url-type="safe" onclick="selectUrl(this)">https://premium-webhost.com</div>
+                <div class="url-item" data-url-type="safe" onclick="selectUrl(this)">https://best-online-courses.edu</div>
+                <div class="url-item" data-url-type="safe" onclick="selectUrl(this)">https://trustedtravel-agency.com</div>
+                <div class="url-item" data-url-type="safe" onclick="selectUrl(this)">https://global-news-network.net</div>
+                <div class="url-item" data-url-type="safe" onclick="selectUrl(this)">https://digital-bookstore.org</div>
+            
+                <!-- Unsafe URLs -->
+                <div class="url-item" data-url-type="threat" onclick="selectUrl(this)">http://secure-login-banking.com</div>
+                <div class="url-item" data-url-type="threat" onclick="selectUrl(this)">https://facebok-login.com</div>
+                <div class="url-item" data-url-type="threat" onclick="selectUrl(this)">http://amazone.safe-deals.info</div>
+                <div class="url-item" data-url-type="threat" onclick="selectUrl(this)">http://your-bank-account-secure.biz</div>
+                <div class="url-item" data-url-type="threat" onclick="selectUrl(this)">http://google.com-prizegiveaway.xyz</div>
+                <div class="url-item" data-url-type="threat" onclick="selectUrl(this)">https://trust-login.mail-confirm.cc</div>
+                <div class="url-item" data-url-type="threat" onclick="selectUrl(this)">http://paypal.user-account.info</div>
+                <div class="url-item" data-url-type="threat" onclick="selectUrl(this)">https://microsoft-update.center</div>
+                <div class="url-item" data-url-type="threat" onclick="selectUrl(this)">http://musicstream-platform.net</div>
+                <div class="url-item" data-url-type="threat" onclick="selectUrl(this)">https://official-techsupport.help</div>
+            </div>
+            <br><br>
+            <button id="submitAnswers">Submit Answers</button>
+            <p id="feedbackMessage"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 CodeNation Cybersecurity Escape Room</p>
+    </footer>
+
+    <script src="challenge4.js" defer></script>
+</body>
+</html>
