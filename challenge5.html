@@ -45,45 +45,41 @@
                 <p>Also make sure you complete the steps in the correct order, or there may be consequences.</p>
             </div>
             
-            <p id="passwordFeedback">For steps to combat vulnerabilities visit our <a href="policies.html" target="_blank">Policies and Procedures</a>.</p>
-            
             <div id="timer" style="font-weight: bold; color: red; font-size: 24px; text-align: center; margin-top: 20px;">Time Remaining: 05:00</div>
             
 
-            <!-- Pop-up Modal -->
-        <div id="securityAlertModal" style="display: none; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 10;">
-            <div style="background-color: white; width: 60%; margin: 50px auto; padding: 20px; border-radius: 10px;">
-                <h2>Security Alert!</h2>
-                <p id="securityAlertMessage"></p>
-                <button onclick="closeModal()">Acknowledge</button>
+            <div id="notificationModal" style="display: none; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 10;">
+                <div style="background-color: white; width: 60%; margin: 50px auto; padding: 20px; border-radius: 10px;">
+                    <h2>Notification</h2>
+                    <p id="notificationMessage"></p>
+                    <p id="notificationSubMessage" style="color: red;"></p>
+                    <button onclick="closeModal()">Acknowledge</button>
+                </div>
             </div>
-        </div>
+            <p>For steps to combat vulnerabilities visit our <a href="policies.html" target="_blank">Policies and Procedures</a>.</p>
 
-
-
+            <h3>Password</h3>
+            <input type="password" id="passwordInput" placeholder="Enter a strong password">
+            <p id="passwordFeedback"></p>
             
-            <h3>Password Strength</h3>
-            <input type="password" id="passwordInput" placeholder="Enter a strong password" oninput="checkPasswordStrength(this.value)">
             <button id="changePasswordButton" type="button">Change Password</button>
 
-
-            
-            
             <h3>Two-Factor Authentication (2FA)</h3>
-            <button onclick="toggle2FA()">Enable 2FA</button>
+            <button id="btn2FA" onclick="toggle2FA()">Enable 2FA</button>
 
             <h3>Software Updates</h3>
-            <button onclick="updateSoftware()">Check for Updates</button>
+            <button id="btnUpdateSoftware" onclick="updateSoftware()">Check for Updates</button>
 
             <h3>Firewall</h3>
-            <button onclick="toggleFirewall()">Activate Firewall</button>
+            <button id="btnToggleFirewall" onclick="toggleFirewall()">Activate Firewall</button>
 
             <h3>VPN</h3>
-            <button onclick="toggleVPN()">Activate VPN</button>
-<br><br>
+            <button id="btnToggleVPN" onclick="toggleVPN()">Activate VPN</button>
+
+            <br><br>
             <button id="simulateAttack">Test Security Against Cyberattack</button>
             <p id="simulationFeedback"></p>
-            
+
             <div id="randomEvent" style="color: blue;"></div>
         </section>
     </main>

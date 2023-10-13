@@ -34,8 +34,11 @@ header {
 
 .heading {
     width:100%;
-    
-    
+
+}
+
+.important{
+    color:red;
 }
 
 header h1 {

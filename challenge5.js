@@ -37,11 +37,12 @@ const securityIssues = [
 // Add an event listener to the "Change Password" button
 document.getElementById('changePasswordButton').addEventListener('click', function () {
     // Perform password strength check
-    const password = prompt('Enter your new password:');
+    const password = prompt('Re-enter your new password:');
     checkPasswordStrength(password);
 });
 
-function checkPasswordStrength(password) {
+function checkPasswordStrength() {
+    const password = document.getElementById('passwordInput').value;
     const feedback = document.getElementById('passwordFeedback');
     const hasCapital = /[A-Z]/.test(password);
     const hasThreeNumbers = (password.match(/\d/g) || []).length >= 3;
@@ -51,17 +52,12 @@ function checkPasswordStrength(password) {
         feedback.classList.add('valid');
         feedback.classList.remove('alert');
         feedback.innerText = "Password is strong!";
-        // Password is considered changed when it meets the strength criteria
         isPasswordChanged = true;
-
-        // Enable the "Change Password" button
         document.getElementById('changePasswordButton').disabled = false;
     } else {
         feedback.classList.add('alert');
         feedback.classList.remove('valid');
         feedback.innerText = "Must be over 8 characters, contain 1 capital letter, at least 3 numbers, and a special character.";
-
-        // Disable the "Change Password" button if the password is not strong
         document.getElementById('changePasswordButton').disabled = true;
     }
 }
@@ -131,17 +127,19 @@ function simulateAttack() {
         if (missingActions.length === 0) {
             feedback.classList.toggle('valid', true);
             feedback.innerText = "Your system is secure! Good job!";
+            clearInterval(timerInterval); // Stops the countdown timer
         } else {
             feedback.classList.toggle('valid', false);
-            feedback.innerText = `Your system is vulnerable! Take action: ${missingActions.join(', ')}`;
-            penalizeUser(); // Call the penalizeUser function after the attack simulation
+            feedback.innerText = `Follow the policy for assistance: ${missingActions.join(', ')}`;
+            penalizeUser();
         }
     }
 }
 
 
 function penalizeUser() {
-    timeLeft -= 120; // Deduct 2 minutes
+    timeLeft -= 120;
+    alert("Penalty Applied! 2 minutes deducted for security missteps.Make sure to follow the company's cybersecurity policies closely.");
 }
 
 function openRandomSecurityAlert() {
@@ -169,11 +167,10 @@ function startTimer() {
 document.getElementById('simulateAttack').addEventListener('click', simulateAttack);
 
 document.addEventListener("DOMContentLoaded", function () {
-    openRandomSecurityAlert(); // Call this function to display a random security alert when the page loads
+    openRandomSecurityAlert();
     startTimer();
 
-    // Add the event listener for the "Change Password" button
     document.getElementById('changePasswordButton').addEventListener('click', function () {
-        changePassword();
+        checkPasswordStrength();
     });
 });
