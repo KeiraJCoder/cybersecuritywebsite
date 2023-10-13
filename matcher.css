@@ -1,25 +1,109 @@
 .game-container {
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    width: 400px;
-    margin: 50px auto;
+    gap: 5vw;  /* Using viewport width unit for gap so it adjusts with screen size */
+    width: 90vw;  /* Use 90% of the viewport width */
+    margin: 5vh auto;
+    flex-wrap: wrap;  /* Allow items to wrap if there's not enough space */
+    justify-content: space-between;  /* Distribute space evenly between columns */
+}
+
+.vulnerabilities, .consequences {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;  /* Using viewport height unit for gap between cards */
+    width: 45%;  /* Each column takes up about half the width of the game container */
+    flex-basis: calc(50% - 3vw);  /* Adjust for the gap */
 }
 
 .card {
-    width: 190px;
-    height: 70px;
+    width: 100%;  /* Card will take full width of its container */
+    height: 10vh;  /* Adjust height relative to viewport height */
     text-align: center;
-    font-size: 80%;
+    font-size: 2vw;  /* Adjust font-size relative to viewport width */
     display: flex;
-    justify-content: center;   /* Horizontally center */
-    align-items: center;       /* Vertically center */
+    justify-content: center;
+    align-items: center;
     background-color: #eee;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 1vh;  /* Adjust border-radius relative to viewport height */
     user-select: none;
+    border: 0.5vh solid transparent;  /* Adjust border thickness relative to viewport height */
 }
 
 .card.selected {
     background-color: #ddd;
+}
+
+
+/* Color-coordination based on data-match attribute when matched */
+
+.card.matched[data-match="Data Breach"] {
+    border-color: #FF6B6B;
+}
+
+.card.matched[data-match="Exploits"] {
+    border-color: #48A9A6;
+}
+
+.card.matched[data-match="Eavesdrop"] {
+    border-color: #D1E8E2;
+}
+
+.card.matched[data-match="Intercept"] {
+    border-color: #D4AC0D;
+}
+
+.card.matched[data-match="Weak Passwords"] {
+    border-color: #19647E;
+}
+
+.card.matched[data-match="Unpatched Software"] {
+    border-color: #FFC300;
+}
+
+.card.matched[data-match="Social Engineering"] {
+    border-color: #2E4053;
+}
+
+.card.matched[data-match="Default Configurations"] {
+    border-color: #1B4F72;
+}
+
+.card.matched[data-match="Open Ports"] {
+    border-color: #117A65;
+}
+
+.card.matched[data-match="Malware Infection"] {
+    border-color: #641E16;
+}
+
+.card.matched[data-match="Lack of Encryption"] {
+    border-color: #F1C40F;
+}
+
+.card.matched[data-match="Insufficient Backups"] {
+    border-color: #922B21;
+}
+
+.card.matched[data-match="Outdated Hardware"] {
+    border-color: #0B5345;
+}
+
+.card.matched[data-match="Limited Access Control"] {
+    border-color: #17202A;
+}
+
+@media (min-width: 768px) {  /* Adjust as necessary, this is typically for tablet-sized screens and up */
+    .game-container {
+        flex-direction: row; /* Switch to horizontal layout for larger screens */
+        gap: 2vw;
+    }
+    
+    .vulnerabilities, .consequences {
+        width: 45%;          /* Each column takes up about half the width */
+    }
+    
+    .card {
+        font-size: 1vw;      /* Adjust font size for larger screens */
+    }
 }

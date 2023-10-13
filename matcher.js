@@ -5,21 +5,27 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function shuffleCards() {
     const gameContainer = document.getElementById('gameContainer');
-    const vulnerabilities = Array.from(gameContainer.children).filter(card => !card.textContent.includes('risk') && !card.textContent.includes('Risk'));
-    const consequences = Array.from(gameContainer.children).filter(card => card.textContent.includes('risk') || card.textContent.includes('Risk'));
+    const vulnerabilitiesContainer = gameContainer.querySelector('.vulnerabilities');
+    const consequencesContainer = gameContainer.querySelector('.consequences');
+
+    const vulnerabilities = Array.from(vulnerabilitiesContainer.children);
+    const consequences = Array.from(consequencesContainer.children);
 
     // Shuffle each array
     shuffleArray(vulnerabilities);
     shuffleArray(consequences);
 
-    // Empty the container
-    while (gameContainer.firstChild) {
-        gameContainer.firstChild.remove();
+    // Empty the containers
+    while (vulnerabilitiesContainer.firstChild) {
+        vulnerabilitiesContainer.firstChild.remove();
+    }
+    while (consequencesContainer.firstChild) {
+        consequencesContainer.firstChild.remove();
     }
 
-    // Append vulnerabilities (risks) then consequences
-    vulnerabilities.forEach(card => gameContainer.appendChild(card));
-    consequences.forEach(card => gameContainer.appendChild(card));
+    // Append the shuffled vulnerabilities and consequences back to their respective containers
+    vulnerabilities.forEach(card => vulnerabilitiesContainer.appendChild(card));
+    consequences.forEach(card => consequencesContainer.appendChild(card));
 }
 
 function shuffleArray(array) {
@@ -39,11 +45,18 @@ function attachCardListeners() {
                     alert('Matched: ' + this.textContent + ' to ' + selectedCard.textContent);
                     this.style.backgroundColor = '#a1f5a1';
                     selectedCard.style.backgroundColor = '#a1f5a1';
+
+                    // Add the "matched" class to display the color-coordinated border
+                    this.classList.add('matched');
+                    selectedCard.classList.add('matched');
+
                     selectedCard = null;
                 } else {
-                    this.classList.remove('selected');
-                    selectedCard.classList.remove('selected');
-                    selectedCard = null;
+                    setTimeout(() => {
+                        this.classList.remove('selected');
+                        selectedCard.classList.remove('selected');
+                        selectedCard = null;
+                    }, 1000);
                 }
             } else {
                 selectedCard = this;
