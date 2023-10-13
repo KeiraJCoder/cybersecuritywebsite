@@ -140,8 +140,8 @@ footer {
 }
 
 .card {
-    width: 100%;
-    height: 10vh;
+    width: 100% !important; /* Card will take full width of its container */
+    height: 10vh !important; /* Adjust height relative to viewport height */
     text-align: center;
     font-size: 2vw !important; /* Adjust font-size relative to viewport width */
     display: flex;
@@ -149,9 +149,9 @@ footer {
     align-items: center;
     background-color: #eee;
     cursor: pointer;
-    border-radius: 1vh;
+    border-radius: 1vh; /* Adjust border-radius relative to viewport height */
     user-select: none;
-    border: 0.5vh solid transparent;
+    border: 0.5vh solid transparent; /* Adjust border thickness relative to viewport height */
 }
 
 .card.selected {
