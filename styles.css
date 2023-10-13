@@ -1,14 +1,21 @@
+@font-face {
+    font-family: 'Gilroy ExtraBold';
+    src: url('/Gilroy-ExtraBold.otf') format('opentype');
+}
+
+
 /* Reset some default styles */
 body, h1, h2, p, ul, li, a {
     margin: 0;
     padding: 0;
+    
 }
 
 /* Set background color and text color for the entire page */
 body {
     background-color: #f4f4f4;
     color: #333;
-    font-family: Arial, sans-serif;
+    font-family: 'Gilroy ExtraBold', sans-serif;
 }
 
 body {
@@ -42,14 +49,14 @@ header {
 }
 
 header h1 {
-    
+    font-family: 'Gilroy ExtraBold', sans-serif;
     font-size: 36px;
     margin-bottom: 10px;
 }
 
 header p {
     font-size: 18px;
-    
+    font-family: 'Gilroy ExtraBold', sans-serif;
 }
 
 /* Navigation styles */
