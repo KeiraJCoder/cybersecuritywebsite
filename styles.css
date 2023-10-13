@@ -3,72 +3,60 @@
     src: url('/Gilroy-ExtraBold.otf') format('opentype');
 }
 
-
-/* Reset some default styles */
 body, h1, h2, p, ul, li, a {
     margin: 0;
     padding: 0;
-    
 }
 
-/* Set background color and text color for the entire page */
 body {
     background-color: #f4f4f4;
     color: #333;
     font-family: 'Gilroy ExtraBold', sans-serif;
-}
-
-body {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center content horizontally */
-    justify-content: center; /* Center content vertically */
-
+    align-items: center; 
+    justify-content: center; 
 }
 
 main {
-    text-align: center; /* Center-align content inside the main element */
+    text-align: center;
+    width: 90%; /* Set the width to be 90% for mobile views */
+    max-width: 800px; /* Ensure it doesn't exceed 800px on larger screens */
 }
 
-/* Header styles */
 header {
     background-color: #ffffff;
     color: #ffc710f8;
-    text-shadow:rgb(3, 3, 255) 1px 0.5px;
+    text-shadow: rgb(3, 3, 255) 1px 0.5px;
     text-align: center;
     padding: 20px;
 }
 
 .heading {
-    width:100%;
-
+    width: 100%;
 }
 
-.important{
-    color:red;
+.important {
+    color: red;
 }
 
 header h1 {
-    font-family: 'Gilroy ExtraBold', sans-serif;
-    font-size: 36px;
+    font-size: 3.6rem; /* Using relative units */
     margin-bottom: 10px;
 }
 
 header p {
-    font-size: 18px;
-    font-family: 'Gilroy ExtraBold', sans-serif;
+    font-size: 1.8rem; /* Using relative units */
 }
 
-/* Navigation styles */
 nav ul {
     list-style: none;
     display: flex;
-    text-shadow:black 1px 0.5px;
+    text-shadow: black 1px 0.5px;
     justify-content: center;
     background-color: #0230ae;
     padding: 10px;
 }
-
 
 nav ul li {
     margin: 0 10px;
@@ -85,32 +73,28 @@ nav ul li a:hover {
     color: #0074D9;
 }
 
-/* Main content section styles */
 main {
-    max-width: 800px;
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Section styles */
 section {
     margin-bottom: 30px;
 }
 
 section h2 {
-    font-size: 24px;
+    font-size: 2.4rem; /* Using relative units */
     margin-bottom: 10px;
     color: #0074D9;
 }
 
 section p {
-    font-size: 16px;
+    font-size: 1.6rem; /* Using relative units */
     line-height: 1.5;
 }
 
-/* Links within sections */
 section a {
     color: #0074D9;
     text-decoration: none;
@@ -122,11 +106,16 @@ section a:hover {
     color: #0056b3;
 }
 
-/* Footer styles */
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 10px;
-    font-size: 14px;
+    font-size: 1.4rem; /* Using relative units */
+}
+
+/* Media Queries for larger screens */
+@media screen and (min-width: 768px) {
+    /* Adjustments for larger screens go here */
+    /* For example, increasing font size, adjusting margins/paddings, etc. */
 }

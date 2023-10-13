@@ -107,3 +107,57 @@
         font-size: 1vw;      /* Adjust font size for larger screens */
     }
 }
+
+/* Smaller Mobile Devices: < 480px */
+@media (max-width: 479px) {
+    .game-container {
+        width: 95vw;  /* Slightly reduce container width for small screens */
+        margin: 3vh auto; /* Adjust margin for small screens */
+    }
+
+    .card {
+        font-size: 3.5vw; /* Increase font size for better readability on small screens */
+        min-height: 8vh; /* Reduce minimum height for smaller screens */
+    }
+}
+
+/* Mobile Devices: 480px - 767px */
+@media (min-width: 480px) and (max-width: 767px) {
+    .game-container {
+        width: 90vw;
+        margin: 3vh auto;
+    }
+
+    .card {
+        font-size: 3vw;
+        min-height: 9vh;
+    }
+}
+
+/* Tablets: 768px - 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .game-container {
+        gap: 3vw;
+    }
+
+    .vulnerabilities, .consequences {
+        width: 48%; /* Slightly increase column width for tablets */
+    }
+
+    .card {
+        font-size: 2.5vw;
+        min-height: 10vh;
+    }
+}
+
+/* Desktops: > 1024px */
+@media (min-width: 1025px) {
+    .game-container {
+        gap: 2vw;
+    }
+
+    .card {
+        font-size: 2vw;
+        min-height: 10vh;
+    }
+}
