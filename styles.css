@@ -135,7 +135,7 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 2vh;  /* Using viewport height unit for gap between cards */
-    width: 45%;  /* Each column takes up about half the width of the game container */
+    width: 45% auto;  /* Each column takes up about half the width of the game container */
     flex-basis: calc(50% - 3vw);  /* Adjust for the gap */
 }
 
