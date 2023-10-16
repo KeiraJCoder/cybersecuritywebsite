@@ -1,0 +1,50 @@
+
+/* Decipher Game Styles */
+#encodedSaying .displayedChar {
+    font-size: 1.4rem;
+    letter-spacing: 0.2em; /* Spacing between letters for better readability */
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#encodedSaying .decodeInput {
+    width: 20px; /* Width of the input box */
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 4px;
+    border: 1px solid #aaa;
+}
+
+#inputWithCheckBtns button {
+    font-size: 1rem;
+    padding: 5px 10px;
+    margin-left: 5px;
+    cursor: pointer;
+    background-color: #0074D9;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+#inputWithCheckBtns button:hover {
+    background-color: #0059ff;
+}
+
+/* Success and Error Highlights for inputs */
+input.success {
+    border-color: green;
+}
+
+input.error {
+    border-color: red;
+}
+
+.word-space {
+    display: inline-block;
+    width: 30px;  /* Adjust as needed */
+}
+
+.success {
+    color: green;
+}

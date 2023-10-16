@@ -1,0 +1,156 @@
+
+
+.game-container {
+    display: flex;
+    gap: 5vw;  
+    width: 90vw; 
+    margin: 5vh auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.vulnerabilities, .consequences {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    width: 45%;
+    flex-basis: calc(50% - 3vw);
+}
+
+.card {
+    width: 100% !important; 
+    height: 10vh !important;
+    text-align: center;
+    font-size: 2vw !important; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+    cursor: pointer;
+    border-radius: 1vh;
+    user-select: none;
+    border: 0.5vh solid transparent;
+}
+
+.card.selected {
+    background-color: #ddd;
+}
+
+
+/* Color-coordination based on data-match attribute when matched */
+
+.card.matched[data-match="Data Breach"] {
+    border-color: #ff0000;
+}
+
+.card.matched[data-match="Exploits"] {
+    border-color: #fffb00;
+}
+
+.card.matched[data-match="Eavesdrop"] {
+    border-color: #44ff00;
+}
+
+.card.matched[data-match="Intercept"] {
+    border-color: #00ffd9;
+}
+
+.card.matched[data-match="Weak Passwords"] {
+    border-color: #0059ff;
+}
+
+.card.matched[data-match="Unpatched Software"] {
+    border-color: #9500ff;
+}
+
+.card.matched[data-match="Social Engineering"] {
+    border-color: #d000ff;
+}
+
+.card.matched[data-match="Default Configurations"] {
+    border-color: #ff009d;
+}
+
+.card.matched[data-match="Open Ports"] {
+    border-color: #c70909;
+}
+
+.card.matched[data-match="Malware Infection"] {
+    border-color: #ffbf00;
+}
+
+.card.matched[data-match="Lack of Encryption"] {
+    border-color: #2be68c;
+}
+
+.card.matched[data-match="Insufficient Backups"] {
+    border-color: #d248e7;
+}
+
+.card.matched[data-match="Outdated Hardware"] {
+    border-color: #2e87d5;
+}
+
+.card.matched[data-match="Limited Access Control"] {
+    border-color: #ae58ff;
+}
+
+
+/* =======================================
+   RESPONSIVE STYLES
+   ======================================= */
+
+/* Mobile Styles */
+@media only screen and (max-width: 480px) {
+    .game-container {
+        width: 95vw;
+        gap: 3vw;
+        margin: 3vh auto;
+    }
+
+    .vulnerabilities, .consequences {
+        width: 100%;
+        margin-bottom: 2vh;
+    }
+
+    .card {
+        height: 8vh;
+        font-size: 4vw;
+    }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+    .game-container {
+        width: 90vw;
+        gap: 4vw;
+        margin: 4vh auto;
+    }
+
+    .vulnerabilities, .consequences {
+        width: 47%;
+    }
+
+    .card {
+        height: 9vh;
+        font-size: 3vw;
+    }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 1025px) {
+    .game-container {
+        width: 80vw;
+        gap: 5vw;
+        margin: 5vh auto;
+    }
+
+    .vulnerabilities, .consequences {
+        width: 45%;
+    }
+
+    .card {
+        height: 10vh;
+        font-size: 2vw;
+    }
+}

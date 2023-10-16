@@ -1,8 +1,14 @@
-@font-face {
+/* =======================================
+   FONT DEFINITIONS
+   ======================================= */
+   @font-face {
     font-family: 'Gilroy ExtraBold';
     src: url('Gilroy-ExtraBold.otf') format('opentype');
 }
 
+/* =======================================
+   BASE AND RESET STYLES
+   ======================================= */
 * {
     box-sizing: border-box;
     padding: 2px;
@@ -13,6 +19,9 @@ body, h1, h2, p, ul, li, a {
     padding: 0;
 }
 
+/* =======================================
+   BODY AND GENERAL LAYOUT
+   ======================================= */
 body {
     text-align: center;
     background-color: #f4f4f4;
@@ -30,6 +39,9 @@ main {
     width: 90%; 
 }
 
+/* =======================================
+   HEADER STYLES
+   ======================================= */
 header {
     background-color: #ffffff;
     color: #ffc710f8;
@@ -38,15 +50,7 @@ header {
     padding: 20px;
 }
 
-.heading {
-    width: 100%;
-}
-
-.important {
-    color: red;
-}
-
-header h1 {
+.header h1 {
     font-size: 3.6rem; 
     margin-bottom: 10px;
 }
@@ -55,6 +59,9 @@ header p {
     font-size: 1.8rem; 
 }
 
+/* =======================================
+   NAVIGATION STYLES
+   ======================================= */
 nav ul {
     list-style: none;
     display: flex;
@@ -68,25 +75,27 @@ nav ul li {
     margin: 0 10px;
 }
 
-/* Increase the size of the links in the nav section */
 nav ul li a {
-    font-size: 1.6rem; /* Adjust to your desired size */
+    font-size: 1.6rem; 
     color: #fff;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
 }
 
-
 nav ul li a:hover {
     color: #0074D9;
 }
 
-main {
-    margin: 10px auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+/* =======================================
+   MAIN CONTENT STYLES
+   ======================================= */
+.heading {
+    width: 100%;
+}
+
+.important {
+    color: red;
 }
 
 section {
@@ -106,7 +115,7 @@ section p {
 }
 
 section a {
-    font-size: 1.4rem; /* Adjust to your desired size */
+    font-size: 1.4rem;
     color: #0074D9;
     text-decoration: none;
     font-weight: bold;
@@ -122,6 +131,9 @@ section a:hover {
     font-size: 5vh;
 }
 
+/* =======================================
+            FOOTER STYLES
+======================================= */
 footer {
     background-color: #333;
     color: #fff;
@@ -130,220 +142,76 @@ footer {
     font-size: 1.4rem; 
 }
 
-.game-container {
-    display: flex;
-    gap: 5vw;  
-    width: 90vw; 
-    margin: 5vh auto;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
+/* =======================================
+   RESPONSIVE STYLES
+   ======================================= */
 
-.vulnerabilities, .consequences {
-    display: flex;
-    flex-direction: column;
-    gap: 2vh;
-    width: 45%;
-    flex-basis: calc(50% - 3vw);
-}
-
-.card {
-    width: 100% !important; 
-    height: 10vh !important;
-    text-align: center;
-    font-size: 2vw !important; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #eee;
-    cursor: pointer;
-    border-radius: 1vh;
-    user-select: none;
-    border: 0.5vh solid transparent;
-}
-
-.card.selected {
-    background-color: #ddd;
-}
-
-
-/* Color-coordination based on data-match attribute when matched */
-
-.card.matched[data-match="Data Breach"] {
-    border-color: #ff0000;
-}
-
-.card.matched[data-match="Exploits"] {
-    border-color: #fffb00;
-}
-
-.card.matched[data-match="Eavesdrop"] {
-    border-color: #44ff00;
-}
-
-.card.matched[data-match="Intercept"] {
-    border-color: #00ffd9;
-}
-
-.card.matched[data-match="Weak Passwords"] {
-    border-color: #0059ff;
-}
-
-.card.matched[data-match="Unpatched Software"] {
-    border-color: #9500ff;
-}
-
-.card.matched[data-match="Social Engineering"] {
-    border-color: #d000ff;
-}
-
-.card.matched[data-match="Default Configurations"] {
-    border-color: #ff009d;
-}
-
-.card.matched[data-match="Open Ports"] {
-    border-color: #c70909;
-}
-
-.card.matched[data-match="Malware Infection"] {
-    border-color: #ffbf00;
-}
-
-.card.matched[data-match="Lack of Encryption"] {
-    border-color: #2be68c;
-}
-
-.card.matched[data-match="Insufficient Backups"] {
-    border-color: #d248e7;
-}
-
-.card.matched[data-match="Outdated Hardware"] {
-    border-color: #2e87d5;
-}
-
-.card.matched[data-match="Limited Access Control"] {
-    border-color: #ae58ff;
-}
-/* Decipher Game Styles */
-#encodedSaying .displayedChar {
-    font-size: 1.4rem;
-    letter-spacing: 0.2em; /* Spacing between letters for better readability */
-    display: inline-block;
-    margin-right: 10px;
-}
-
-#encodedSaying .decodeInput {
-    width: 20px; /* Width of the input box */
-    text-align: center;
-    margin-top: 10px;
-    border-radius: 4px;
-    border: 1px solid #aaa;
-}
-
-#inputWithCheckBtns button {
-    font-size: 1rem;
-    padding: 5px 10px;
-    margin-left: 5px;
-    cursor: pointer;
-    background-color: #0074D9;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-}
-
-#inputWithCheckBtns button:hover {
-    background-color: #0059ff;
-}
-
-/* Success and Error Highlights for inputs */
-input.success {
-    border-color: green;
-}
-
-input.error {
-    border-color: red;
-}
-
-.word-space {
-    display: inline-block;
-    width: 30px;  /* Adjust as needed */
-}
-
-.success {
-    color: green;
-}
-
-@media (min-width: 768px) {
-    main {
-        width: 80%; 
+/* Mobile Styles */
+@media only screen and (max-width: 480px) {
+    header h1 {
+        font-size: 2.2rem;
     }
 
+    header p,
+    nav ul li a,
+    section h2,
+    section p,
+    section a {
+        font-size: 1.2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    main {
+        width: 100%;
+        padding: 5px;
+    }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
     header h1 {
-        font-size: 4rem;
+        font-size: 2.8rem;
     }
 
     header p {
-        font-size: 2rem;
+        font-size: 1.4rem;
     }
 
-    section h2 {
-        font-size: 3rem;
+    nav ul li a,
+    section h2,
+    section p,
+    section a {
+        font-size: 1.4rem;
     }
 
-    section p {
-        font-size: 1.8rem;
+    main {
+        width: 95%;
+    }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 1025px) {
+    header h1 {
+        font-size: 3.6rem;
     }
 
-    footer {
+    header p,
+    nav ul li a,
+    section h2,
+    section p,
+    section a {
         font-size: 1.6rem;
     }
 
-    .game-container {
-        flex-direction: row; 
-        gap: 2vw;
-    }
-
-    .vulnerabilities, .consequences {
-        width: 45%; 
-    }
-
-    .card {
-        font-size: 1.5rem;
-    }
-}
-
-@media (max-width: 479px) {
-    .game-container {
-        width: 95vw;
-        margin: 3vh auto;
-    }
-
-    .card {
-        font-size: 1.5rem; 
-        min-height: 8vh;
-    }
-}
-
-@media (min-width: 480px) and (max-width: 767px) {
-    .game-container {
-        width: 90vw;
-        margin: 3vh auto;
-    }
-
-    .card {
-        font-size: 1.8rem;
-        min-height: 9vh;
-    }
-}
-
-@media (min-width: 1025px) {
-    .game-container {
-        gap: 2vw;
-    }
-
-    .card {
-        font-size: 2rem; 
-        min-height: 10vh;
+    main {
+        width: 90%;
     }
 }
