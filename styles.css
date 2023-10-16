@@ -3,17 +3,15 @@
     src: url('Gilroy-ExtraBold.otf') format('opentype');
 }
 
-*{
+* {
     box-sizing: border-box;
-    padding:2px;
+    padding: 2px;
 }
 
 body, h1, h2, p, ul, li, a {
     margin: 0;
     padding: 0;
 }
-
-
 
 body {
     text-align: center;
@@ -24,13 +22,12 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 80vh; /* Ensure that body takes up at least 80% of viewport height */
+    min-height: 80vh; 
 }
 
 main {
     text-align: center;
-    width: 90%; /* Set the width to be 90% for mobile views */
-    
+    width: 90%; 
 }
 
 header {
@@ -50,12 +47,12 @@ header {
 }
 
 header h1 {
-    font-size: 3.6rem; /* Using relative units */
+    font-size: 3.6rem; 
     margin-bottom: 10px;
 }
 
 header p {
-    font-size: 1.8rem; /* Using relative units */
+    font-size: 1.8rem; 
 }
 
 nav ul {
@@ -94,14 +91,14 @@ section {
 }
 
 section h2 {
-    font-size: 2.4rem; /* Using relative units */
+    font-size: 2.4rem; 
     margin-bottom: 10px;
     color: #0074D9;
     text-shadow: black 1px 1px;
 }
 
 section p {
-    font-size: 1.6rem; /* Using relative units */
+    font-size: 1.6rem; 
     line-height: 1.5;
 }
 
@@ -117,7 +114,7 @@ section a:hover {
     text-shadow: #0059ff 1px 1px;
 }
 
-.link{
+.link {
     font-size: 5vh;
 }
 
@@ -126,46 +123,39 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px;
-    font-size: 1.4rem; /* Using relative units */
+    font-size: 1.4rem; 
 }
-
-/* Media Queries for larger screens */
-@media screen and (min-width: 768px) {
-    /* Adjustments for larger screens go here */
-    /* For example, increasing font size, adjusting margins/paddings, etc. */
-}
-
 
 .game-container {
     display: flex;
-    gap: 5vw;  /* Using viewport width unit for gap so it adjusts with screen size */
-    width: 90vw;  /* Use 90% of the viewport width */
+    gap: 5vw;  
+    width: 90vw; 
     margin: 5vh auto;
-    flex-wrap: wrap;  /* Allow items to wrap if there's not enough space */
-    justify-content: space-between;  /* Distribute space evenly between columns */
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .vulnerabilities, .consequences {
     display: flex;
     flex-direction: column;
-    gap: 2vh;  /* Using viewport height unit for gap between cards */
-    width: 45% auto;  /* Each column takes up about half the width of the game container */
-    flex-basis: calc(50% - 3vw);  /* Adjust for the gap */
+    gap: 2vh;
+    width: 45%;
+    flex-basis: calc(50% - 3vw);
 }
 
 .card {
-    width: 100% !important; /* Card will take full width of its container */
-    height: 10vh !important; /* Adjust height relative to viewport height */
+    width: 100% !important; 
+    height: 10vh !important;
     text-align: center;
-    font-size: 2vw !important; /* Adjust font-size relative to viewport width */
+    font-size: 2vw !important; 
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #eee;
     cursor: pointer;
-    border-radius: 1vh; /* Adjust border-radius relative to viewport height */
+    border-radius: 1vh;
     user-select: none;
-    border: 0.5vh solid transparent; /* Adjust border thickness relative to viewport height */
+    border: 0.5vh solid transparent;
 }
 
 .card.selected {
@@ -230,36 +220,57 @@ footer {
 .card.matched[data-match="Limited Access Control"] {
     border-color: #ae58ff;
 }
+@media (min-width: 768px) {
+    main {
+        width: 80%; 
+    }
 
-@media (min-width: 768px) {  /* Adjust as necessary, this is typically for tablet-sized screens and up */
+    header h1 {
+        font-size: 4rem;
+    }
+
+    header p {
+        font-size: 2rem;
+    }
+
+    section h2 {
+        font-size: 3rem;
+    }
+
+    section p {
+        font-size: 1.8rem;
+    }
+
+    footer {
+        font-size: 1.6rem;
+    }
+
     .game-container {
-        flex-direction: row; /* Switch to horizontal layout for larger screens */
+        flex-direction: row; 
         gap: 2vw;
     }
-    
+
     .vulnerabilities, .consequences {
-        width: 45%;          /* Each column takes up about half the width */
+        width: 45%; 
     }
-    
+
     .card {
-        font-size: 1vw;      /* Adjust font size for larger screens */
+        font-size: 1.5rem;
     }
 }
 
-/* Smaller Mobile Devices: < 480px */
 @media (max-width: 479px) {
     .game-container {
-        width: 95vw;  /* Slightly reduce container width for small screens */
-        margin: 3vh auto; /* Adjust margin for small screens */
+        width: 95vw;
+        margin: 3vh auto;
     }
 
     .card {
-        font-size: 3.5vw; /* Increase font size for better readability on small screens */
-        min-height: 8vh; /* Reduce minimum height for smaller screens */
+        font-size: 1.5rem; 
+        min-height: 8vh;
     }
 }
 
-/* Mobile Devices: 480px - 767px */
 @media (min-width: 480px) and (max-width: 767px) {
     .game-container {
         width: 90vw;
@@ -267,35 +278,18 @@ footer {
     }
 
     .card {
-        font-size: 3vw;
+        font-size: 1.8rem;
         min-height: 9vh;
     }
 }
 
-/* Desktops: > 1024px */
 @media (min-width: 1025px) {
     .game-container {
         gap: 2vw;
     }
 
     .card {
-        font-size: 2vw;
+        font-size: 2rem; 
         min-height: 10vh;
-    }
-}
-
-
-@media (min-width: 768px) {
-    .game-container {
-        flex-direction: row;
-        gap: 2vw;
-    }
-
-    .vulnerabilities, .consequences {
-        width: 45%;
-    }
-
-    .card {
-        font-size: 1vw;
     }
 }
