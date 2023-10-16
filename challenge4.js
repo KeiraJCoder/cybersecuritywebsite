@@ -23,12 +23,28 @@ function selectUrl(element) {
 }
 
 document.getElementById('submitAnswers').addEventListener('click', function() {
-    const selectedUrls = document.querySelectorAll('.url-item.selected[data-url-type="threat"]');
+    const selectedThreatUrls = document.querySelectorAll('.url-item.selected[data-url-type="threat"]');
+    const alreadyCorrectUrls = document.querySelectorAll('.url-item.correctAnswer[data-url-type="threat"]');
     const incorrectSelections = document.querySelectorAll('.url-item.selected[data-url-type="safe"]');
     
-    if (selectedUrls.length === 10 && incorrectSelections.length === 0) {
-        document.getElementById('feedbackMessage').innerText = "Congratulations! You've successfully identified all unsafe URLs!";
+    const totalCorrectSelections = [...selectedThreatUrls, ...alreadyCorrectUrls];
+
+    // Remove duplicates in case some URLs have both classes
+    const uniqueCorrectSelections = Array.from(new Set(totalCorrectSelections));
+    
+    // Highlight newly identified correct answers in green
+    selectedThreatUrls.forEach(url => {
+        url.classList.add('correctAnswer');
+        url.classList.remove('selected');  // This is just for visual (to clear the red color), we still consider them selected
+    });
+
+    // Deselect incorrect answers
+    incorrectSelections.forEach(url => url.classList.remove('selected'));
+
+    if (uniqueCorrectSelections.length === 10 && incorrectSelections.length === 0) {
+        document.getElementById('feedbackMessage').innerText = "Congratulations! You've successfully identified all unsafe URLs!\n\n👍";
     } else {
-        document.getElementById('feedbackMessage').innerText = `You've correctly identified ${selectedUrls.length} unsafe URLs. Please review your selections.`;
+        document.getElementById('feedbackMessage').innerText = `You've correctly identified ${uniqueCorrectSelections.length} out of 10 unsafe URLs. Please review your selections.`;
     }
 });
+

@@ -43,6 +43,12 @@ main {
     text-decoration: underline;
 }
 
+/* Correctly identified threats should have a green background when selected */
+.url-item.selected.correctSelection[data-url-type="threat"] {
+    background-color: green;
+    color: white;
+}
+
 /* Submit button */
 button#submitAnswers {
     display: block;
@@ -69,3 +75,8 @@ p#feedbackMessage {
     margin-top: 20px;
 }
 
+
+.correctAnswer {
+    background-color: green;
+    color: white; 
+}
