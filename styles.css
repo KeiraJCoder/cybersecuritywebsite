@@ -25,7 +25,7 @@ body {
 main {
     text-align: center;
     width: 90%; /* Set the width to be 90% for mobile views */
-    max-width: 800px; /* Ensure it doesn't exceed 800px on larger screens */
+    
 }
 
 header {
