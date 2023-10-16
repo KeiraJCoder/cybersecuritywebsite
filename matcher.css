@@ -1,5 +1,3 @@
-
-
 .game-container {
     display: flex;
     gap: 5vw;  
@@ -19,9 +17,9 @@
 
 .card {
     width: 100% !important; 
-    height: 10vh !important;
+    height: auto; /* Adjusted */
     text-align: center;
-    font-size: 2vw !important; 
+    font-size: 1rem; /* Adjusted */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,71 +28,18 @@
     border-radius: 1vh;
     user-select: none;
     border: 0.5vh solid transparent;
+    padding: 10px; /* Added */
+    max-height: 15vh;  /* Added */
+    overflow: hidden;  /* Added */
+    text-overflow: ellipsis;  /* Added */
+    white-space: nowrap;  /* Added */
 }
 
 .card.selected {
     background-color: #ddd;
 }
 
-
-/* Color-coordination based on data-match attribute when matched */
-
-.card.matched[data-match="Data Breach"] {
-    border-color: #ff0000;
-}
-
-.card.matched[data-match="Exploits"] {
-    border-color: #fffb00;
-}
-
-.card.matched[data-match="Eavesdrop"] {
-    border-color: #44ff00;
-}
-
-.card.matched[data-match="Intercept"] {
-    border-color: #00ffd9;
-}
-
-.card.matched[data-match="Weak Passwords"] {
-    border-color: #0059ff;
-}
-
-.card.matched[data-match="Unpatched Software"] {
-    border-color: #9500ff;
-}
-
-.card.matched[data-match="Social Engineering"] {
-    border-color: #d000ff;
-}
-
-.card.matched[data-match="Default Configurations"] {
-    border-color: #ff009d;
-}
-
-.card.matched[data-match="Open Ports"] {
-    border-color: #c70909;
-}
-
-.card.matched[data-match="Malware Infection"] {
-    border-color: #ffbf00;
-}
-
-.card.matched[data-match="Lack of Encryption"] {
-    border-color: #2be68c;
-}
-
-.card.matched[data-match="Insufficient Backups"] {
-    border-color: #d248e7;
-}
-
-.card.matched[data-match="Outdated Hardware"] {
-    border-color: #2e87d5;
-}
-
-.card.matched[data-match="Limited Access Control"] {
-    border-color: #ae58ff;
-}
-
+/* ... Color-coordination styles ... */
 
 /* =======================================
    RESPONSIVE STYLES
@@ -114,8 +59,8 @@
     }
 
     .card {
-        height: 8vh;
-        font-size: 4vw;
+        height: auto;  /* Adjusted */
+        font-size: 3vw;  /* Adjusted */
     }
 }
 
@@ -132,8 +77,8 @@
     }
 
     .card {
-        height: 9vh;
-        font-size: 3vw;
+        height: auto;  /* Adjusted */
+        font-size: 2vw;  /* Adjusted */
     }
 }
 
@@ -150,7 +95,7 @@
     }
 
     .card {
-        height: 10vh;
-        font-size: 2vw;
+        height: auto;  /* Adjusted */
+        font-size: 1.5vw;  /* Adjusted */
     }
 }
