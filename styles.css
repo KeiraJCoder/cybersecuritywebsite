@@ -165,59 +165,59 @@ footer {
 /* Color-coordination based on data-match attribute when matched */
 
 .card.matched[data-match="Data Breach"] {
-    border-color: #FF6B6B;
+    border-color: #ff0000;
 }
 
 .card.matched[data-match="Exploits"] {
-    border-color: #48A9A6;
+    border-color: #fffb00;
 }
 
 .card.matched[data-match="Eavesdrop"] {
-    border-color: #D1E8E2;
+    border-color: #44ff00;
 }
 
 .card.matched[data-match="Intercept"] {
-    border-color: #D4AC0D;
+    border-color: #00ffd9;
 }
 
 .card.matched[data-match="Weak Passwords"] {
-    border-color: #19647E;
+    border-color: #0059ff;
 }
 
 .card.matched[data-match="Unpatched Software"] {
-    border-color: #FFC300;
+    border-color: #9500ff;
 }
 
 .card.matched[data-match="Social Engineering"] {
-    border-color: #2E4053;
+    border-color: #d000ff;
 }
 
 .card.matched[data-match="Default Configurations"] {
-    border-color: #1B4F72;
+    border-color: #ff009d;
 }
 
 .card.matched[data-match="Open Ports"] {
-    border-color: #117A65;
+    border-color: #c70909;
 }
 
 .card.matched[data-match="Malware Infection"] {
-    border-color: #641E16;
+    border-color: #ffbf00;
 }
 
 .card.matched[data-match="Lack of Encryption"] {
-    border-color: #F1C40F;
+    border-color: #2be68c;
 }
 
 .card.matched[data-match="Insufficient Backups"] {
-    border-color: #922B21;
+    border-color: #d248e7;
 }
 
 .card.matched[data-match="Outdated Hardware"] {
-    border-color: #0B5345;
+    border-color: #2e87d5;
 }
 
 .card.matched[data-match="Limited Access Control"] {
-    border-color: #17202A;
+    border-color: #ae58ff;
 }
 
 @media (min-width: 768px) {  /* Adjust as necessary, this is typically for tablet-sized screens and up */
