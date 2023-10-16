@@ -68,12 +68,15 @@ nav ul li {
     margin: 0 10px;
 }
 
+/* Increase the size of the links in the nav section */
 nav ul li a {
+    font-size: 1.6rem; /* Adjust to your desired size */
     color: #fff;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
 }
+
 
 nav ul li a:hover {
     color: #0074D9;
@@ -91,18 +94,19 @@ section {
 }
 
 section h2 {
-    font-size: 2.4rem; 
+    font-size: 1.7rem; 
     margin-bottom: 10px;
     color: #0074D9;
     text-shadow: black 1px 1px;
 }
 
 section p {
-    font-size: 1.6rem; 
+    font-size: 1.4rem; 
     line-height: 1.5;
 }
 
 section a {
+    font-size: 1.4rem; /* Adjust to your desired size */
     color: #0074D9;
     text-decoration: none;
     font-weight: bold;
