@@ -1,0 +1,58 @@
+/* =======================================
+   PASSWORD CRACKING TERMINAL STYLES
+   ======================================= */
+
+/* Specific to Password Cracking Terminal section */
+section h3 {
+    font-size: 1.8rem;
+    margin: 20px 0;
+    color: #ffc710f8;
+    text-shadow: rgb(3, 3, 255) 1px 0.5px;
+}
+
+#passwordInput {
+    padding: 10px;
+    font-size: 1.4rem;
+    margin-top: 10px;
+    width: 80%;
+    max-width: 400px; /* Maximum width for larger screens */
+    border: 2px solid #0074D9;
+    border-radius: 5px;
+    outline: none;
+}
+
+#checkPasswordButton {
+    padding: 10px 20px;
+    font-size: 1.4rem;
+    background-color: #0074D9;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#checkPasswordButton:hover {
+    background-color: #005bb5; /* Slightly darker shade */
+}
+
+#passwordMessage {
+    font-size: 1.6rem;
+    margin-top: 15px;
+    font-weight: bold;
+    color: red; /* Color for incorrect password by default */
+}
+
+#passwordHints {
+    font-size: 1.4rem;
+    margin-top: 10px;
+    color: #ffc710f8; /* Keeping color consistent with header */
+}
+
+/* Making sure hints stand out a bit more */
+#passwordHints h4 {
+    font-size: 1.5rem;
+    color: #0074D9;
+    text-shadow: black 1px 1px;
+}
