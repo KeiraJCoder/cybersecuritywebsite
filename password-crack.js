@@ -111,9 +111,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (userGuess === randomPassword) {
             passwordMessage.textContent = "Password cracked! Access granted.";
+            passwordMessage.style.color = "green"; // <-- Add this line
             passwordHints.textContent = ""; // Clear the hint section
         } else {
             passwordMessage.textContent = "Incorrect password. Try again.";
+            passwordMessage.style.color = "red"; // <-- You can set it back to red if it's incorrect
 
             // Increase the hint level for more specific hints
             hintLevel++;
