@@ -17,9 +17,9 @@
 
 .card {
     width: 100% !important; 
-    height: auto; /* Adjusted */
+    height: auto;
     text-align: center;
-    font-size: 1rem; /* Adjusted */
+    font-size: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,22 +28,75 @@
     border-radius: 1vh;
     user-select: none;
     border: 0.5vh solid transparent;
-    padding: 10px; /* Added */
-    max-height: 15vh;  /* Added */
-    overflow: hidden;  /* Added */
-    text-overflow: ellipsis;  /* Added */
-    white-space: nowrap;  /* Added */
+    padding: 10px;
+    max-height: 15vh;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .card.selected {
     background-color: #ddd;
 }
 
-/* ... Color-coordination styles ... */
+/* Color-coordination based on data-match attribute when matched */
+.card.matched[data-match="Breach Risk"] {
+    border-color: #ff0000;
+}
 
-/* =======================================
-   RESPONSIVE STYLES
-   ======================================= */
+.card.matched[data-match="Malware Risk"] {
+    border-color: #fffb00;
+}
+
+.card.matched[data-match="Eavesdropping Risk"] {
+    border-color: #44ff00;
+}
+
+.card.matched[data-match="Intercept Risk"] {
+    border-color: #00ffd9;
+}
+
+.card.matched[data-match="Access Breach"] {
+    border-color: #0059ff;
+}
+
+.card.matched[data-match="Exploit Risk"] {
+    border-color: #9500ff;
+}
+
+.card.matched[data-match="Manipulation Risk"] {
+    border-color: #d000ff;
+}
+
+.card.matched[data-match="Access Risk"] {
+    border-color: #ff009d;
+}
+
+.card.matched[data-match="Attack Gateway"] {
+    border-color: #c70909;
+}
+
+.card.matched[data-match="Data Theft & Damage"] {
+    border-color: #ffbf00;
+}
+
+.card.matched[data-match="Data Exposure"] {
+    border-color: #2be68c;
+}
+
+.card.matched[data-match="Data Loss"] {
+    border-color: #d248e7;
+}
+
+.card.matched[data-match="Vulnerabilities"] {
+    border-color: #2e87d5;
+}
+
+.card.matched[data-match="Data Breach Risk"] {
+    border-color: #ae58ff;
+}
+
+/* RESPONSIVE STYLES */
 
 /* Mobile Styles */
 @media only screen and (max-width: 480px) {
@@ -59,8 +112,8 @@
     }
 
     .card {
-        height: auto;  /* Adjusted */
-        font-size: 3vw;  /* Adjusted */
+        height: auto;
+        font-size: 3vw;
     }
 }
 
@@ -77,8 +130,8 @@
     }
 
     .card {
-        height: auto;  /* Adjusted */
-        font-size: 2vw;  /* Adjusted */
+        height: auto;
+        font-size: 2vw;
     }
 }
 
@@ -95,7 +148,7 @@
     }
 
     .card {
-        height: auto;  /* Adjusted */
-        font-size: 1.5vw;  /* Adjusted */
+        height: auto;
+        font-size: 1.5vw;
     }
 }

@@ -46,9 +46,14 @@ function attachCardListeners() {
                     this.style.backgroundColor = '#a1f5a1';
                     selectedCard.style.backgroundColor = '#a1f5a1';
 
-                    // Add the "matched" class to display the color-coordinated border
+                    // Add the "matched" class to both cards
                     this.classList.add('matched');
                     selectedCard.classList.add('matched');
+
+                    // Get the border color from the CSS and apply it to both cards
+                    const borderColor = getComputedStyle(this).borderColor;
+                    this.style.borderColor = borderColor;
+                    selectedCard.style.borderColor = borderColor;
 
                     selectedCard = null;
                 } else {
