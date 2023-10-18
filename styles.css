@@ -98,8 +98,8 @@ nav ul li a:hover {
 .heading {
     max-width: 90%;  
     height: auto;    
-    display: block;  
-    margin: 10px auto;
+    display: flex;  
+    justify-content: center;
 }
 
 .important {
