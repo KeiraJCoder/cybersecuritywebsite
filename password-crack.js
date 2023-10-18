@@ -4,94 +4,94 @@ document.addEventListener("DOMContentLoaded", function () {
     const passwordMessage = document.getElementById("passwordMessage");
     const passwordHints = document.getElementById("passwordHints");
 
-    // Object to store hints for specific passwords
     const randomPasswordHints = {
         "123456": [
             "This password is very weak.",
-            "It consists of only consecutive numbers.",
-            "It's one of the most commonly used passwords."
+            "It's a sequence of numbers.",
+            "It's the first 6 numbers on a keyboard."
         ],
         "password": [
-            "This password is extremely weak.",
-            "It's a single word commonly used as a password.",
-            "It's the same as the word itself."
+            "This is probably the weakest word-based password.",
+            "It's often a default password for many accounts.",
+            "It literally is 'password'."
         ],
         "12345678": [
-            "This password is weak.",
-            "It consists of consecutive numbers.",
-            "It's slightly longer than '123456'."
+            "This is a very common number-based password.",
+            "It's a sequence of numbers.",
+            "It's the first 8 numbers in sequence."
         ],
         "12345": [
-            "This password is weak.",
-            "It consists of consecutive numbers.",
-            "It's one of the weakest passwords."
+            "This is one of the simplest sequences of numbers.",
+            "It's a consecutive sequence.",
+            "It's the first 5 numbers in sequence."
         ],
         "qwerty": [
-            "This password is weak.",
-            "It's a simple keyboard pattern.",
-            "It's commonly used as a password."
+            "This password is related to the keyboard layout.",
+            "It's a sequence found on the top row of a keyboard.",
+            "It's the first 6 characters on the top row."
         ],
         "abc123": [
-            "This password is weak.",
-            "It's a combination of letters and numbers.",
-            "It's predictable and easy to guess."
+            "This password combines basic letters and numbers.",
+            "It's the first three letters followed by numbers.",
+            "It starts with 'abc' and ends with '123'."
         ],
         "111111": [
-            "This password is weak.",
-            "It consists of repeating numbers.",
-            "It's a very simple password."
+            "This password is extremely basic.",
+            "All the numbers are the same.",
+            "It's just six ones in a row."
         ],
         "admin": [
-            "This password is weak.",
-            "It's a common username used as a password.",
-            "It's easily guessable."
+            "This password is a role that has top-level access.",
+            "Often default for many accounts.",
+            "It's a 5-letter word for someone in charge."
         ],
         "letmein": [
-            "This password is weak.",
-            "It's a phrase commonly used as a password.",
-            "It suggests granting access."
+            "This password is a request.",
+            "It's like asking someone to allow you inside.",
+            "It says 'let me in'."
         ],
         "welcome": [
-            "This password is weak.",
-            "It's a friendly greeting used as a password.",
-            "It's commonly used and easily guessable."
+            "This password is a friendly greeting.",
+            "You might see it at the entrance of a place.",
+            "It's almost the opposite of 'goodbye'."
         ],
         "sunshine": [
-            "This password is weak.",
-            "It's a positive word used as a password.",
-            "It's not very secure."
+            "This password is bright and warm.",
+            "It's what you hope for on a beach day.",
+            "It's a big, bright star in the sky."
         ],
         "football": [
-            "This password is weak.",
-            "It's a sports-related word used as a password.",
-            "It's commonly used and easy to guess."
+            "This password is related to a popular sport.",
+            "It's played with 11 players on each side.",
+            "A game played with a round ball mostly with feet."
         ],
         "password1": [
-            "This password is weak.",
-            "It's a common password with a number appended.",
-            "It's only slightly stronger than 'password'."
+            "This is a variant of a very common password.",
+            "It's a simple word followed by a number.",
+            "It's 'password' with a '1' at the end."
         ],
         "123123": [
-            "This password is weak.",
-            "It consists of consecutive numbers repeated.",
-            "It's not secure."
+            "This password has a repeated pattern.",
+            "It's a short sequence of numbers, then repeated.",
+            "The sequence '123' is used twice."
         ],
         "1234": [
-            "This password is weak.",
-            "It's a very short sequence of numbers.",
-            "It's easy to guess."
+            "This is one of the simplest numeric passwords.",
+            "It's a very short sequence.",
+            "First 4 numbers in sequence."
         ],
         "superman": [
-            "This password is weak.",
-            "It's a common word related to a superhero.",
-            "It's not secure."
+            "This password is associated with a hero.",
+            "It's a character known to fly.",
+            "A man who wears a cape and the letter 'S'."
         ],
         "iloveyou": [
-            "This password is weak.",
-            "It's a phrase expressing love.",
-            "It's easily guessable."
+            "This password expresses a deep emotion.",
+            "It's three words combined into one.",
+            "A way to tell someone you have feelings for them."
         ]
     };
+    
 
     // Get the shuffled passwords from passwords.js
     const shuffledPasswords = passwords.slice(); // Copy the shuffled passwords array
