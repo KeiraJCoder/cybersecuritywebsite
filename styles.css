@@ -1,7 +1,7 @@
 /* =======================================
    FONT DEFINITIONS
    ======================================= */
-@font-face {
+   @font-face {
     font-family: 'Gilroy ExtraBold';
     src: url('Gilroy-ExtraBold.otf') format('opentype');
 }
@@ -19,10 +19,8 @@ body, h1, h2, p, ul, li, a {
     padding: 0;
 }
 
-/* =======================================
-   BODY AND GENERAL LAYOUT
-   ======================================= */
 body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
     text-align: center;
     background-color: #f4f4f4;
     color: #333;
@@ -31,12 +29,12 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 80vh; 
+    min-height: 80vh;
 }
 
 main {
     text-align: center;
-    width: 90%; 
+    width: 90%;
 }
 
 /* =======================================
@@ -47,16 +45,23 @@ header {
     color: #ffc710f8;
     text-shadow: rgb(3, 3, 255) 1px 0.5px;
     text-align: center;
-    padding: 30px;
+    padding: 2% 30px;
 }
 
 .header h1 {
-    font-size: 4.5rem; 
+    font-size: 4.5rem;
     margin-bottom: 15px;
 }
 
 header p {
-    font-size: 1.8rem; 
+    font-size: 1.8rem;
+}
+
+.header img {
+    max-width: 90%;  
+    height: auto;    
+    display: block;  
+    margin: 10px auto;
 }
 
 /* =======================================
@@ -76,7 +81,7 @@ nav ul li {
 }
 
 nav ul li a {
-    font-size: 1.8rem; 
+    font-size: 1.8rem;
     color: #fff;
     text-decoration: none;
     font-weight: bold;
@@ -91,7 +96,10 @@ nav ul li a:hover {
    MAIN CONTENT STYLES
    ======================================= */
 .heading {
-    width: 120%;
+    max-width: 90%;  
+    height: auto;    
+    display: block;  
+    margin: 10px auto;
 }
 
 .important {
@@ -103,14 +111,14 @@ section {
 }
 
 section h2 {
-    font-size: 1.7rem; 
+    font-size: 1.7rem;
     margin-bottom: 10px;
     color: #0074D9;
     text-shadow: black 1px 1px;
 }
 
 section p {
-    font-size: 1.7rem; 
+    font-size: 1.7rem;
     line-height: 1.5;
 }
 
@@ -132,20 +140,19 @@ section a:hover {
 }
 
 /* =======================================
-            FOOTER STYLES
-======================================= */
+   FOOTER STYLES
+   ======================================= */
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 10px;
-    font-size: 1.4rem; 
+    font-size: 1.4rem;
 }
 
 /* =======================================
    RESPONSIVE STYLES
    ======================================= */
-
 /* Mobile Styles */
 @media only screen and (max-width: 480px) {
     header h1 {
