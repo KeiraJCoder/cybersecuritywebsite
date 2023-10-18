@@ -48,7 +48,7 @@ header {
     padding: 2% 30px;
 }
 
-.header h1 {
+header h1 {
     font-size: 4.5rem;
     margin-bottom: 15px;
 }
@@ -57,11 +57,11 @@ header p {
     font-size: 1.8rem;
 }
 
-.header img {
-    max-width: 90%;  
-    height: auto;    
-    display: block;  
-    margin: 10px auto;
+header img {
+    max-width: 90% !important;  
+    height: auto !important;    
+    display: block !important;  
+    margin: 10px auto !important;
 }
 
 /* =======================================
@@ -96,10 +96,10 @@ nav ul li a:hover {
    MAIN CONTENT STYLES
    ======================================= */
 .heading {
-    max-width: 90%;  
-    height: auto;    
-    display: flex;  
-    justify-content: center;
+    max-width: 90% !important;  
+    height: auto !important;    
+    display: block !important;  
+    margin: 10px auto !important;
 }
 
 .important {
