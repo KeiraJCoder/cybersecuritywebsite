@@ -1,7 +1,7 @@
 /* =======================================
    FONT DEFINITIONS
    ======================================= */
-   @font-face {
+@font-face {
     font-family: 'Gilroy ExtraBold';
     src: url('Gilroy-ExtraBold.otf') format('opentype');
 }
@@ -47,12 +47,12 @@ header {
     color: #ffc710f8;
     text-shadow: rgb(3, 3, 255) 1px 0.5px;
     text-align: center;
-    padding: 20px;
+    padding: 30px;
 }
 
 .header h1 {
-    font-size: 3.6rem; 
-    margin-bottom: 10px;
+    font-size: 4.5rem; 
+    margin-bottom: 15px;
 }
 
 header p {
@@ -68,7 +68,7 @@ nav ul {
     text-shadow: black 1px 0.5px;
     justify-content: center;
     background-color: #0230ae;
-    padding: 10px;
+    padding: 15px;
 }
 
 nav ul li {
@@ -76,7 +76,7 @@ nav ul li {
 }
 
 nav ul li a {
-    font-size: 1.6rem; 
+    font-size: 1.8rem; 
     color: #fff;
     text-decoration: none;
     font-weight: bold;
@@ -91,7 +91,7 @@ nav ul li a:hover {
    MAIN CONTENT STYLES
    ======================================= */
 .heading {
-    width: 100%;
+    width: 120%;
 }
 
 .important {
@@ -110,12 +110,12 @@ section h2 {
 }
 
 section p {
-    font-size: 1.4rem; 
+    font-size: 1.7rem; 
     line-height: 1.5;
 }
 
 section a {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     color: #0074D9;
     text-decoration: none;
     font-weight: bold;
@@ -200,7 +200,7 @@ footer {
 /* Desktop Styles */
 @media only screen and (min-width: 1025px) {
     header h1 {
-        font-size: 3.6rem;
+        font-size: 4.5rem;
     }
 
     header p,
@@ -208,7 +208,7 @@ footer {
     section h2,
     section p,
     section a {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
 
     main {
